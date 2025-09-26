@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+import { Inter, Poppins } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "Lurnix",
+    template: "%s | Lurnix",
+  },
+  description: "Lurnix platform",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html suppressHydrationWarning>
+      <body className={`${inter.variable} ${poppins.variable} antialiased font-sans`}>
+        {children}
+      </body>
+    </html>
+  );
+}
