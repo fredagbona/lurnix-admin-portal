@@ -1,4 +1,4 @@
-## Lurnix Frontend
+## Lurnix Admin Portal
 
 Next.js 14 App Router project with:
 
